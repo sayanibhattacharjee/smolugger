@@ -1,216 +1,191 @@
 # command-line-arguments
-main.main STEXT size=607 args=0x0 locals=0x100 funcid=0x0 align=0x0
-	0x0000 00000 (/workspaces/target/target.go:7)	TEXT	main.main(SB), ABIInternal, $256-0
-	0x0000 00000 (/workspaces/target/target.go:7)	LEAQ	-128(SP), R12
+main.main STEXT size=543 args=0x0 locals=0xe8 funcid=0x0 align=0x0
+	0x0000 00000 (/workspaces/target/target.go:7)	TEXT	main.main(SB), ABIInternal, $232-0
+	0x0000 00000 (/workspaces/target/target.go:7)	LEAQ	-104(SP), R12
 	0x0005 00005 (/workspaces/target/target.go:7)	CMPQ	R12, 16(R14)
 	0x0009 00009 (/workspaces/target/target.go:7)	PCDATA	$0, $-2
-	0x0009 00009 (/workspaces/target/target.go:7)	JLS	597
+	0x0009 00009 (/workspaces/target/target.go:7)	JLS	533
 	0x000f 00015 (/workspaces/target/target.go:7)	PCDATA	$0, $-1
-	0x000f 00015 (/workspaces/target/target.go:7)	SUBQ	$256, SP
-	0x0016 00022 (/workspaces/target/target.go:7)	MOVQ	BP, 248(SP)
-	0x001e 00030 (/workspaces/target/target.go:7)	LEAQ	248(SP), BP
+	0x000f 00015 (/workspaces/target/target.go:7)	SUBQ	$232, SP
+	0x0016 00022 (/workspaces/target/target.go:7)	MOVQ	BP, 224(SP)
+	0x001e 00030 (/workspaces/target/target.go:7)	LEAQ	224(SP), BP
 	0x0026 00038 (/workspaces/target/target.go:7)	FUNCDATA	$0, gclocals·ykHN0vawYuq1dUW4zEe2gA==(SB)
-	0x0026 00038 (/workspaces/target/target.go:7)	FUNCDATA	$1, gclocals·jfJUoH/pww2vUtnyhOalDA==(SB)
+	0x0026 00038 (/workspaces/target/target.go:7)	FUNCDATA	$1, gclocals·hl8hlxyyFD33Z4qAKqAg3w==(SB)
 	0x0026 00038 (/workspaces/target/target.go:7)	FUNCDATA	$2, main.main.stkobj(SB)
 	0x0026 00038 (/workspaces/target/target.go:8)	MOVQ	$10, main.a+48(SP)
 	0x002f 00047 (/workspaces/target/target.go:9)	MOVQ	$20, main.b+40(SP)
-	0x0038 00056 (/workspaces/target/target.go:10)	MOVQ	$80, main.c+32(SP)
-	0x0041 00065 (/workspaces/target/target.go:11)	MOVUPS	X15, main..autotmp_4+184(SP)
-	0x004a 00074 (/workspaces/target/target.go:11)	MOVUPS	X15, main..autotmp_4+200(SP)
-	0x0053 00083 (/workspaces/target/target.go:11)	MOVUPS	X15, main..autotmp_4+216(SP)
-	0x005c 00092 (/workspaces/target/target.go:11)	MOVUPS	X15, main..autotmp_4+232(SP)
-	0x0065 00101 (/workspaces/target/target.go:11)	LEAQ	main..autotmp_4+184(SP), CX
-	0x006d 00109 (/workspaces/target/target.go:11)	MOVQ	CX, main..autotmp_7+72(SP)
-	0x0072 00114 (/workspaces/target/target.go:11)	TESTB	AL, (CX)
-	0x0074 00116 (/workspaces/target/target.go:11)	LEAQ	type:string(SB), CX
-	0x007b 00123 (/workspaces/target/target.go:11)	MOVQ	CX, main..autotmp_4+184(SP)
-	0x0083 00131 (/workspaces/target/target.go:11)	LEAQ	main..stmp_0(SB), CX
-	0x008a 00138 (/workspaces/target/target.go:11)	MOVQ	CX, main..autotmp_4+192(SP)
-	0x0092 00146 (/workspaces/target/target.go:11)	MOVQ	main.a+48(SP), AX
-	0x0097 00151 (/workspaces/target/target.go:11)	PCDATA	$1, $1
-	0x0097 00151 (/workspaces/target/target.go:11)	CALL	runtime.convT64(SB)
-	0x009c 00156 (/workspaces/target/target.go:11)	MOVQ	AX, main..autotmp_8+64(SP)
-	0x00a1 00161 (/workspaces/target/target.go:11)	MOVQ	main..autotmp_7+72(SP), DI
-	0x00a6 00166 (/workspaces/target/target.go:11)	TESTB	AL, (DI)
-	0x00a8 00168 (/workspaces/target/target.go:11)	LEAQ	type:int(SB), CX
-	0x00af 00175 (/workspaces/target/target.go:11)	MOVQ	CX, 16(DI)
-	0x00b3 00179 (/workspaces/target/target.go:11)	LEAQ	24(DI), CX
-	0x00b7 00183 (/workspaces/target/target.go:11)	PCDATA	$0, $-2
-	0x00b7 00183 (/workspaces/target/target.go:11)	CMPL	runtime.writeBarrier(SB), $0
-	0x00be 00190 (/workspaces/target/target.go:11)	NOP
-	0x00c0 00192 (/workspaces/target/target.go:11)	JEQ	196
-	0x00c2 00194 (/workspaces/target/target.go:11)	JMP	202
-	0x00c4 00196 (/workspaces/target/target.go:11)	MOVQ	AX, 24(DI)
-	0x00c8 00200 (/workspaces/target/target.go:11)	JMP	212
-	0x00ca 00202 (/workspaces/target/target.go:11)	MOVQ	CX, DI
-	0x00cd 00205 (/workspaces/target/target.go:11)	CALL	runtime.gcWriteBarrier(SB)
-	0x00d2 00210 (/workspaces/target/target.go:11)	JMP	212
-	0x00d4 00212 (/workspaces/target/target.go:11)	PCDATA	$0, $-1
-	0x00d4 00212 (/workspaces/target/target.go:11)	MOVQ	main.b+40(SP), AX
-	0x00d9 00217 (/workspaces/target/target.go:11)	CALL	runtime.convT64(SB)
-	0x00de 00222 (/workspaces/target/target.go:11)	MOVQ	AX, main..autotmp_9+56(SP)
-	0x00e3 00227 (/workspaces/target/target.go:11)	MOVQ	main..autotmp_7+72(SP), DI
-	0x00e8 00232 (/workspaces/target/target.go:11)	TESTB	AL, (DI)
-	0x00ea 00234 (/workspaces/target/target.go:11)	LEAQ	type:int(SB), CX
-	0x00f1 00241 (/workspaces/target/target.go:11)	MOVQ	CX, 32(DI)
-	0x00f5 00245 (/workspaces/target/target.go:11)	LEAQ	40(DI), CX
-	0x00f9 00249 (/workspaces/target/target.go:11)	PCDATA	$0, $-2
-	0x00f9 00249 (/workspaces/target/target.go:11)	CMPL	runtime.writeBarrier(SB), $0
-	0x0100 00256 (/workspaces/target/target.go:11)	JEQ	260
-	0x0102 00258 (/workspaces/target/target.go:11)	JMP	266
-	0x0104 00260 (/workspaces/target/target.go:11)	MOVQ	AX, 40(DI)
-	0x0108 00264 (/workspaces/target/target.go:11)	JMP	276
-	0x010a 00266 (/workspaces/target/target.go:11)	MOVQ	CX, DI
-	0x010d 00269 (/workspaces/target/target.go:11)	CALL	runtime.gcWriteBarrier(SB)
-	0x0112 00274 (/workspaces/target/target.go:11)	JMP	276
-	0x0114 00276 (/workspaces/target/target.go:11)	PCDATA	$0, $-1
-	0x0114 00276 (/workspaces/target/target.go:11)	MOVQ	main.c+32(SP), AX
-	0x0119 00281 (/workspaces/target/target.go:11)	CALL	runtime.convT64(SB)
-	0x011e 00286 (/workspaces/target/target.go:11)	MOVQ	AX, main..autotmp_10+96(SP)
-	0x0123 00291 (/workspaces/target/target.go:11)	MOVQ	main..autotmp_7+72(SP), DI
-	0x0128 00296 (/workspaces/target/target.go:11)	TESTB	AL, (DI)
-	0x012a 00298 (/workspaces/target/target.go:11)	LEAQ	type:int(SB), CX
-	0x0131 00305 (/workspaces/target/target.go:11)	MOVQ	CX, 48(DI)
-	0x0135 00309 (/workspaces/target/target.go:11)	LEAQ	56(DI), CX
-	0x0139 00313 (/workspaces/target/target.go:11)	PCDATA	$0, $-2
-	0x0139 00313 (/workspaces/target/target.go:11)	CMPL	runtime.writeBarrier(SB), $0
-	0x0140 00320 (/workspaces/target/target.go:11)	JEQ	324
-	0x0142 00322 (/workspaces/target/target.go:11)	JMP	330
-	0x0144 00324 (/workspaces/target/target.go:11)	MOVQ	AX, 56(DI)
-	0x0148 00328 (/workspaces/target/target.go:11)	JMP	340
-	0x014a 00330 (/workspaces/target/target.go:11)	MOVQ	CX, DI
-	0x014d 00333 (/workspaces/target/target.go:11)	CALL	runtime.gcWriteBarrier(SB)
-	0x0152 00338 (/workspaces/target/target.go:11)	JMP	340
-	0x0154 00340 (/workspaces/target/target.go:11)	PCDATA	$0, $-1
-	0x0154 00340 (/workspaces/target/target.go:11)	MOVQ	main..autotmp_7+72(SP), AX
-	0x0159 00345 (/workspaces/target/target.go:11)	TESTB	AL, (AX)
-	0x015b 00347 (/workspaces/target/target.go:11)	JMP	349
-	0x015d 00349 (/workspaces/target/target.go:11)	MOVQ	AX, main..autotmp_6+104(SP)
-	0x0162 00354 (/workspaces/target/target.go:11)	MOVQ	$4, main..autotmp_6+112(SP)
-	0x016b 00363 (/workspaces/target/target.go:11)	MOVQ	$4, main..autotmp_6+120(SP)
-	0x0174 00372 (/workspaces/target/target.go:11)	MOVL	$4, BX
-	0x0179 00377 (/workspaces/target/target.go:11)	MOVQ	BX, CX
-	0x017c 00380 (/workspaces/target/target.go:11)	PCDATA	$1, $0
-	0x017c 00380 (/workspaces/target/target.go:11)	NOP
-	0x0180 00384 (/workspaces/target/target.go:11)	CALL	fmt.Println(SB)
-	0x0185 00389 (/workspaces/target/target.go:12)	CALL	main.f1(SB)
-	0x018a 00394 (/workspaces/target/target.go:12)	MOVQ	AX, main.sum+24(SP)
-	0x018f 00399 (/workspaces/target/target.go:13)	MOVUPS	X15, main..autotmp_5+152(SP)
-	0x0198 00408 (/workspaces/target/target.go:13)	MOVUPS	X15, main..autotmp_5+168(SP)
-	0x01a1 00417 (/workspaces/target/target.go:13)	LEAQ	main..autotmp_5+152(SP), DX
-	0x01a9 00425 (/workspaces/target/target.go:13)	MOVQ	DX, main..autotmp_12+88(SP)
-	0x01ae 00430 (/workspaces/target/target.go:13)	TESTB	AL, (DX)
-	0x01b0 00432 (/workspaces/target/target.go:13)	LEAQ	type:string(SB), DX
-	0x01b7 00439 (/workspaces/target/target.go:13)	MOVQ	DX, main..autotmp_5+152(SP)
-	0x01bf 00447 (/workspaces/target/target.go:13)	LEAQ	main..stmp_1(SB), DX
-	0x01c6 00454 (/workspaces/target/target.go:13)	MOVQ	DX, main..autotmp_5+160(SP)
-	0x01ce 00462 (/workspaces/target/target.go:13)	MOVQ	main.sum+24(SP), AX
-	0x01d3 00467 (/workspaces/target/target.go:13)	PCDATA	$1, $2
-	0x01d3 00467 (/workspaces/target/target.go:13)	CALL	runtime.convT64(SB)
-	0x01d8 00472 (/workspaces/target/target.go:13)	MOVQ	AX, main..autotmp_13+80(SP)
-	0x01dd 00477 (/workspaces/target/target.go:13)	MOVQ	main..autotmp_12+88(SP), DI
-	0x01e2 00482 (/workspaces/target/target.go:13)	TESTB	AL, (DI)
-	0x01e4 00484 (/workspaces/target/target.go:13)	LEAQ	type:int(SB), DX
-	0x01eb 00491 (/workspaces/target/target.go:13)	MOVQ	DX, 16(DI)
-	0x01ef 00495 (/workspaces/target/target.go:13)	LEAQ	24(DI), DX
-	0x01f3 00499 (/workspaces/target/target.go:13)	PCDATA	$0, $-2
-	0x01f3 00499 (/workspaces/target/target.go:13)	CMPL	runtime.writeBarrier(SB), $0
-	0x01fa 00506 (/workspaces/target/target.go:13)	JEQ	510
-	0x01fc 00508 (/workspaces/target/target.go:13)	JMP	516
-	0x01fe 00510 (/workspaces/target/target.go:13)	MOVQ	AX, 24(DI)
-	0x0202 00514 (/workspaces/target/target.go:13)	JMP	526
-	0x0204 00516 (/workspaces/target/target.go:13)	MOVQ	DX, DI
-	0x0207 00519 (/workspaces/target/target.go:13)	CALL	runtime.gcWriteBarrier(SB)
-	0x020c 00524 (/workspaces/target/target.go:13)	JMP	526
-	0x020e 00526 (/workspaces/target/target.go:13)	PCDATA	$0, $-1
-	0x020e 00526 (/workspaces/target/target.go:13)	MOVQ	main..autotmp_12+88(SP), AX
-	0x0213 00531 (/workspaces/target/target.go:13)	TESTB	AL, (AX)
-	0x0215 00533 (/workspaces/target/target.go:13)	JMP	535
-	0x0217 00535 (/workspaces/target/target.go:13)	MOVQ	AX, main..autotmp_11+128(SP)
-	0x021f 00543 (/workspaces/target/target.go:13)	MOVQ	$2, main..autotmp_11+136(SP)
-	0x022b 00555 (/workspaces/target/target.go:13)	MOVQ	$2, main..autotmp_11+144(SP)
-	0x0237 00567 (/workspaces/target/target.go:13)	MOVL	$2, BX
-	0x023c 00572 (/workspaces/target/target.go:13)	MOVQ	BX, CX
-	0x023f 00575 (/workspaces/target/target.go:13)	PCDATA	$1, $0
-	0x023f 00575 (/workspaces/target/target.go:13)	NOP
-	0x0240 00576 (/workspaces/target/target.go:13)	CALL	fmt.Println(SB)
-	0x0245 00581 (/workspaces/target/target.go:14)	MOVQ	248(SP), BP
-	0x024d 00589 (/workspaces/target/target.go:14)	ADDQ	$256, SP
-	0x0254 00596 (/workspaces/target/target.go:14)	RET
-	0x0255 00597 (/workspaces/target/target.go:14)	NOP
-	0x0255 00597 (/workspaces/target/target.go:7)	PCDATA	$1, $-1
-	0x0255 00597 (/workspaces/target/target.go:7)	PCDATA	$0, $-2
-	0x0255 00597 (/workspaces/target/target.go:7)	CALL	runtime.morestack_noctxt(SB)
-	0x025a 00602 (/workspaces/target/target.go:7)	PCDATA	$0, $-1
-	0x025a 00602 (/workspaces/target/target.go:7)	JMP	0
-	0x0000 4c 8d 64 24 80 4d 3b 66 10 0f 86 46 02 00 00 48  L.d$.M;f...F...H
-	0x0010 81 ec 00 01 00 00 48 89 ac 24 f8 00 00 00 48 8d  ......H..$....H.
-	0x0020 ac 24 f8 00 00 00 48 c7 44 24 30 0a 00 00 00 48  .$....H.D$0....H
-	0x0030 c7 44 24 28 14 00 00 00 48 c7 44 24 20 50 00 00  .D$(....H.D$ P..
-	0x0040 00 44 0f 11 bc 24 b8 00 00 00 44 0f 11 bc 24 c8  .D...$....D...$.
-	0x0050 00 00 00 44 0f 11 bc 24 d8 00 00 00 44 0f 11 bc  ...D...$....D...
-	0x0060 24 e8 00 00 00 48 8d 8c 24 b8 00 00 00 48 89 4c  $....H..$....H.L
-	0x0070 24 48 84 01 48 8d 0d 00 00 00 00 48 89 8c 24 b8  $H..H......H..$.
-	0x0080 00 00 00 48 8d 0d 00 00 00 00 48 89 8c 24 c0 00  ...H......H..$..
-	0x0090 00 00 48 8b 44 24 30 e8 00 00 00 00 48 89 44 24  ..H.D$0.....H.D$
-	0x00a0 40 48 8b 7c 24 48 84 07 48 8d 0d 00 00 00 00 48  @H.|$H..H......H
-	0x00b0 89 4f 10 48 8d 4f 18 83 3d 00 00 00 00 00 66 90  .O.H.O..=.....f.
-	0x00c0 74 02 eb 06 48 89 47 18 eb 0a 48 89 cf e8 00 00  t...H.G...H.....
-	0x00d0 00 00 eb 00 48 8b 44 24 28 e8 00 00 00 00 48 89  ....H.D$(.....H.
-	0x00e0 44 24 38 48 8b 7c 24 48 84 07 48 8d 0d 00 00 00  D$8H.|$H..H.....
-	0x00f0 00 48 89 4f 20 48 8d 4f 28 83 3d 00 00 00 00 00  .H.O H.O(.=.....
-	0x0100 74 02 eb 06 48 89 47 28 eb 0a 48 89 cf e8 00 00  t...H.G(..H.....
-	0x0110 00 00 eb 00 48 8b 44 24 20 e8 00 00 00 00 48 89  ....H.D$ .....H.
-	0x0120 44 24 60 48 8b 7c 24 48 84 07 48 8d 0d 00 00 00  D$`H.|$H..H.....
-	0x0130 00 48 89 4f 30 48 8d 4f 38 83 3d 00 00 00 00 00  .H.O0H.O8.=.....
-	0x0140 74 02 eb 06 48 89 47 38 eb 0a 48 89 cf e8 00 00  t...H.G8..H.....
-	0x0150 00 00 eb 00 48 8b 44 24 48 84 00 eb 00 48 89 44  ....H.D$H....H.D
-	0x0160 24 68 48 c7 44 24 70 04 00 00 00 48 c7 44 24 78  $hH.D$p....H.D$x
-	0x0170 04 00 00 00 bb 04 00 00 00 48 89 d9 0f 1f 40 00  .........H....@.
-	0x0180 e8 00 00 00 00 e8 00 00 00 00 48 89 44 24 18 44  ..........H.D$.D
-	0x0190 0f 11 bc 24 98 00 00 00 44 0f 11 bc 24 a8 00 00  ...$....D...$...
-	0x01a0 00 48 8d 94 24 98 00 00 00 48 89 54 24 58 84 02  .H..$....H.T$X..
-	0x01b0 48 8d 15 00 00 00 00 48 89 94 24 98 00 00 00 48  H......H..$....H
-	0x01c0 8d 15 00 00 00 00 48 89 94 24 a0 00 00 00 48 8b  ......H..$....H.
-	0x01d0 44 24 18 e8 00 00 00 00 48 89 44 24 50 48 8b 7c  D$......H.D$PH.|
-	0x01e0 24 58 84 07 48 8d 15 00 00 00 00 48 89 57 10 48  $X..H......H.W.H
-	0x01f0 8d 57 18 83 3d 00 00 00 00 00 74 02 eb 06 48 89  .W..=.....t...H.
-	0x0200 47 18 eb 0a 48 89 d7 e8 00 00 00 00 eb 00 48 8b  G...H.........H.
-	0x0210 44 24 58 84 00 eb 00 48 89 84 24 80 00 00 00 48  D$X....H..$....H
-	0x0220 c7 84 24 88 00 00 00 02 00 00 00 48 c7 84 24 90  ..$........H..$.
-	0x0230 00 00 00 02 00 00 00 bb 02 00 00 00 48 89 d9 90  ............H...
-	0x0240 e8 00 00 00 00 48 8b ac 24 f8 00 00 00 48 81 c4  .....H..$....H..
-	0x0250 00 01 00 00 c3 e8 00 00 00 00 e9 a1 fd ff ff     ...............
+	0x0038 00056 (/workspaces/target/target.go:10)	MOVUPS	X15, main..autotmp_4+176(SP)
+	0x0041 00065 (/workspaces/target/target.go:10)	MOVUPS	X15, main..autotmp_4+192(SP)
+	0x004a 00074 (/workspaces/target/target.go:10)	MOVUPS	X15, main..autotmp_4+208(SP)
+	0x0053 00083 (/workspaces/target/target.go:10)	LEAQ	main..autotmp_4+176(SP), CX
+	0x005b 00091 (/workspaces/target/target.go:10)	MOVQ	CX, main..autotmp_7+72(SP)
+	0x0060 00096 (/workspaces/target/target.go:10)	TESTB	AL, (CX)
+	0x0062 00098 (/workspaces/target/target.go:10)	LEAQ	type:string(SB), CX
+	0x0069 00105 (/workspaces/target/target.go:10)	MOVQ	CX, main..autotmp_4+176(SP)
+	0x0071 00113 (/workspaces/target/target.go:10)	LEAQ	main..stmp_0(SB), CX
+	0x0078 00120 (/workspaces/target/target.go:10)	MOVQ	CX, main..autotmp_4+184(SP)
+	0x0080 00128 (/workspaces/target/target.go:10)	MOVQ	main.a+48(SP), AX
+	0x0085 00133 (/workspaces/target/target.go:10)	PCDATA	$1, $1
+	0x0085 00133 (/workspaces/target/target.go:10)	CALL	runtime.convT64(SB)
+	0x008a 00138 (/workspaces/target/target.go:10)	MOVQ	AX, main..autotmp_8+64(SP)
+	0x008f 00143 (/workspaces/target/target.go:10)	MOVQ	main..autotmp_7+72(SP), DI
+	0x0094 00148 (/workspaces/target/target.go:10)	TESTB	AL, (DI)
+	0x0096 00150 (/workspaces/target/target.go:10)	LEAQ	type:int(SB), CX
+	0x009d 00157 (/workspaces/target/target.go:10)	MOVQ	CX, 16(DI)
+	0x00a1 00161 (/workspaces/target/target.go:10)	LEAQ	24(DI), CX
+	0x00a5 00165 (/workspaces/target/target.go:10)	PCDATA	$0, $-2
+	0x00a5 00165 (/workspaces/target/target.go:10)	CMPL	runtime.writeBarrier(SB), $0
+	0x00ac 00172 (/workspaces/target/target.go:10)	JEQ	176
+	0x00ae 00174 (/workspaces/target/target.go:10)	JMP	182
+	0x00b0 00176 (/workspaces/target/target.go:10)	MOVQ	AX, 24(DI)
+	0x00b4 00180 (/workspaces/target/target.go:10)	JMP	194
+	0x00b6 00182 (/workspaces/target/target.go:10)	MOVQ	CX, DI
+	0x00b9 00185 (/workspaces/target/target.go:10)	CALL	runtime.gcWriteBarrier(SB)
+	0x00be 00190 (/workspaces/target/target.go:10)	NOP
+	0x00c0 00192 (/workspaces/target/target.go:10)	JMP	194
+	0x00c2 00194 (/workspaces/target/target.go:10)	PCDATA	$0, $-1
+	0x00c2 00194 (/workspaces/target/target.go:10)	MOVQ	main.b+40(SP), AX
+	0x00c7 00199 (/workspaces/target/target.go:10)	CALL	runtime.convT64(SB)
+	0x00cc 00204 (/workspaces/target/target.go:10)	MOVQ	AX, main..autotmp_9+56(SP)
+	0x00d1 00209 (/workspaces/target/target.go:10)	MOVQ	main..autotmp_7+72(SP), DI
+	0x00d6 00214 (/workspaces/target/target.go:10)	TESTB	AL, (DI)
+	0x00d8 00216 (/workspaces/target/target.go:10)	LEAQ	type:int(SB), CX
+	0x00df 00223 (/workspaces/target/target.go:10)	MOVQ	CX, 32(DI)
+	0x00e3 00227 (/workspaces/target/target.go:10)	LEAQ	40(DI), CX
+	0x00e7 00231 (/workspaces/target/target.go:10)	PCDATA	$0, $-2
+	0x00e7 00231 (/workspaces/target/target.go:10)	CMPL	runtime.writeBarrier(SB), $0
+	0x00ee 00238 (/workspaces/target/target.go:10)	JEQ	242
+	0x00f0 00240 (/workspaces/target/target.go:10)	JMP	248
+	0x00f2 00242 (/workspaces/target/target.go:10)	MOVQ	AX, 40(DI)
+	0x00f6 00246 (/workspaces/target/target.go:10)	JMP	263
+	0x00f8 00248 (/workspaces/target/target.go:10)	MOVQ	CX, DI
+	0x00fb 00251 (/workspaces/target/target.go:10)	NOP
+	0x0100 00256 (/workspaces/target/target.go:10)	CALL	runtime.gcWriteBarrier(SB)
+	0x0105 00261 (/workspaces/target/target.go:10)	JMP	263
+	0x0107 00263 (/workspaces/target/target.go:10)	PCDATA	$0, $-1
+	0x0107 00263 (/workspaces/target/target.go:10)	MOVQ	main..autotmp_7+72(SP), AX
+	0x010c 00268 (/workspaces/target/target.go:10)	TESTB	AL, (AX)
+	0x010e 00270 (/workspaces/target/target.go:10)	JMP	272
+	0x0110 00272 (/workspaces/target/target.go:10)	MOVQ	AX, main..autotmp_6+96(SP)
+	0x0115 00277 (/workspaces/target/target.go:10)	MOVQ	$3, main..autotmp_6+104(SP)
+	0x011e 00286 (/workspaces/target/target.go:10)	MOVQ	$3, main..autotmp_6+112(SP)
+	0x0127 00295 (/workspaces/target/target.go:10)	MOVL	$3, BX
+	0x012c 00300 (/workspaces/target/target.go:10)	MOVQ	BX, CX
+	0x012f 00303 (/workspaces/target/target.go:10)	PCDATA	$1, $0
+	0x012f 00303 (/workspaces/target/target.go:10)	CALL	fmt.Println(SB)
+	0x0134 00308 (/workspaces/target/target.go:11)	MOVQ	main.a+48(SP), DX
+	0x0139 00313 (/workspaces/target/target.go:11)	ADDQ	main.b+40(SP), DX
+	0x013e 00318 (/workspaces/target/target.go:11)	MOVQ	DX, main.c+32(SP)
+	0x0143 00323 (/workspaces/target/target.go:12)	CALL	main.f1(SB)
+	0x0148 00328 (/workspaces/target/target.go:12)	MOVQ	AX, main.sum+24(SP)
+	0x014d 00333 (/workspaces/target/target.go:13)	MOVUPS	X15, main..autotmp_5+144(SP)
+	0x0156 00342 (/workspaces/target/target.go:13)	MOVUPS	X15, main..autotmp_5+160(SP)
+	0x015f 00351 (/workspaces/target/target.go:13)	LEAQ	main..autotmp_5+144(SP), DX
+	0x0167 00359 (/workspaces/target/target.go:13)	MOVQ	DX, main..autotmp_11+88(SP)
+	0x016c 00364 (/workspaces/target/target.go:13)	TESTB	AL, (DX)
+	0x016e 00366 (/workspaces/target/target.go:13)	LEAQ	type:string(SB), DX
+	0x0175 00373 (/workspaces/target/target.go:13)	MOVQ	DX, main..autotmp_5+144(SP)
+	0x017d 00381 (/workspaces/target/target.go:13)	LEAQ	main..stmp_1(SB), DX
+	0x0184 00388 (/workspaces/target/target.go:13)	MOVQ	DX, main..autotmp_5+152(SP)
+	0x018c 00396 (/workspaces/target/target.go:13)	MOVQ	main.sum+24(SP), AX
+	0x0191 00401 (/workspaces/target/target.go:13)	ADDQ	main.c+32(SP), AX
+	0x0196 00406 (/workspaces/target/target.go:13)	PCDATA	$1, $2
+	0x0196 00406 (/workspaces/target/target.go:13)	CALL	runtime.convT64(SB)
+	0x019b 00411 (/workspaces/target/target.go:13)	MOVQ	AX, main..autotmp_12+80(SP)
+	0x01a0 00416 (/workspaces/target/target.go:13)	MOVQ	main..autotmp_11+88(SP), DI
+	0x01a5 00421 (/workspaces/target/target.go:13)	TESTB	AL, (DI)
+	0x01a7 00423 (/workspaces/target/target.go:13)	LEAQ	type:int(SB), DX
+	0x01ae 00430 (/workspaces/target/target.go:13)	MOVQ	DX, 16(DI)
+	0x01b2 00434 (/workspaces/target/target.go:13)	LEAQ	24(DI), DX
+	0x01b6 00438 (/workspaces/target/target.go:13)	PCDATA	$0, $-2
+	0x01b6 00438 (/workspaces/target/target.go:13)	CMPL	runtime.writeBarrier(SB), $0
+	0x01bd 00445 (/workspaces/target/target.go:13)	JEQ	450
+	0x01bf 00447 (/workspaces/target/target.go:13)	NOP
+	0x01c0 00448 (/workspaces/target/target.go:13)	JMP	456
+	0x01c2 00450 (/workspaces/target/target.go:13)	MOVQ	AX, 24(DI)
+	0x01c6 00454 (/workspaces/target/target.go:13)	JMP	466
+	0x01c8 00456 (/workspaces/target/target.go:13)	MOVQ	DX, DI
+	0x01cb 00459 (/workspaces/target/target.go:13)	CALL	runtime.gcWriteBarrier(SB)
+	0x01d0 00464 (/workspaces/target/target.go:13)	JMP	466
+	0x01d2 00466 (/workspaces/target/target.go:13)	PCDATA	$0, $-1
+	0x01d2 00466 (/workspaces/target/target.go:13)	MOVQ	main..autotmp_11+88(SP), AX
+	0x01d7 00471 (/workspaces/target/target.go:13)	TESTB	AL, (AX)
+	0x01d9 00473 (/workspaces/target/target.go:13)	JMP	475
+	0x01db 00475 (/workspaces/target/target.go:13)	MOVQ	AX, main..autotmp_10+120(SP)
+	0x01e0 00480 (/workspaces/target/target.go:13)	MOVQ	$2, main..autotmp_10+128(SP)
+	0x01ec 00492 (/workspaces/target/target.go:13)	MOVQ	$2, main..autotmp_10+136(SP)
+	0x01f8 00504 (/workspaces/target/target.go:13)	MOVL	$2, BX
+	0x01fd 00509 (/workspaces/target/target.go:13)	MOVQ	BX, CX
+	0x0200 00512 (/workspaces/target/target.go:13)	PCDATA	$1, $0
+	0x0200 00512 (/workspaces/target/target.go:13)	CALL	fmt.Println(SB)
+	0x0205 00517 (/workspaces/target/target.go:14)	MOVQ	224(SP), BP
+	0x020d 00525 (/workspaces/target/target.go:14)	ADDQ	$232, SP
+	0x0214 00532 (/workspaces/target/target.go:14)	RET
+	0x0215 00533 (/workspaces/target/target.go:14)	NOP
+	0x0215 00533 (/workspaces/target/target.go:7)	PCDATA	$1, $-1
+	0x0215 00533 (/workspaces/target/target.go:7)	PCDATA	$0, $-2
+	0x0215 00533 (/workspaces/target/target.go:7)	CALL	runtime.morestack_noctxt(SB)
+	0x021a 00538 (/workspaces/target/target.go:7)	PCDATA	$0, $-1
+	0x021a 00538 (/workspaces/target/target.go:7)	JMP	0
+	0x0000 4c 8d 64 24 98 4d 3b 66 10 0f 86 06 02 00 00 48  L.d$.M;f.......H
+	0x0010 81 ec e8 00 00 00 48 89 ac 24 e0 00 00 00 48 8d  ......H..$....H.
+	0x0020 ac 24 e0 00 00 00 48 c7 44 24 30 0a 00 00 00 48  .$....H.D$0....H
+	0x0030 c7 44 24 28 14 00 00 00 44 0f 11 bc 24 b0 00 00  .D$(....D...$...
+	0x0040 00 44 0f 11 bc 24 c0 00 00 00 44 0f 11 bc 24 d0  .D...$....D...$.
+	0x0050 00 00 00 48 8d 8c 24 b0 00 00 00 48 89 4c 24 48  ...H..$....H.L$H
+	0x0060 84 01 48 8d 0d 00 00 00 00 48 89 8c 24 b0 00 00  ..H......H..$...
+	0x0070 00 48 8d 0d 00 00 00 00 48 89 8c 24 b8 00 00 00  .H......H..$....
+	0x0080 48 8b 44 24 30 e8 00 00 00 00 48 89 44 24 40 48  H.D$0.....H.D$@H
+	0x0090 8b 7c 24 48 84 07 48 8d 0d 00 00 00 00 48 89 4f  .|$H..H......H.O
+	0x00a0 10 48 8d 4f 18 83 3d 00 00 00 00 00 74 02 eb 06  .H.O..=.....t...
+	0x00b0 48 89 47 18 eb 0c 48 89 cf e8 00 00 00 00 66 90  H.G...H.......f.
+	0x00c0 eb 00 48 8b 44 24 28 e8 00 00 00 00 48 89 44 24  ..H.D$(.....H.D$
+	0x00d0 38 48 8b 7c 24 48 84 07 48 8d 0d 00 00 00 00 48  8H.|$H..H......H
+	0x00e0 89 4f 20 48 8d 4f 28 83 3d 00 00 00 00 00 74 02  .O H.O(.=.....t.
+	0x00f0 eb 06 48 89 47 28 eb 0f 48 89 cf 0f 1f 44 00 00  ..H.G(..H....D..
+	0x0100 e8 00 00 00 00 eb 00 48 8b 44 24 48 84 00 eb 00  .......H.D$H....
+	0x0110 48 89 44 24 60 48 c7 44 24 68 03 00 00 00 48 c7  H.D$`H.D$h....H.
+	0x0120 44 24 70 03 00 00 00 bb 03 00 00 00 48 89 d9 e8  D$p.........H...
+	0x0130 00 00 00 00 48 8b 54 24 30 48 03 54 24 28 48 89  ....H.T$0H.T$(H.
+	0x0140 54 24 20 e8 00 00 00 00 48 89 44 24 18 44 0f 11  T$ .....H.D$.D..
+	0x0150 bc 24 90 00 00 00 44 0f 11 bc 24 a0 00 00 00 48  .$....D...$....H
+	0x0160 8d 94 24 90 00 00 00 48 89 54 24 58 84 02 48 8d  ..$....H.T$X..H.
+	0x0170 15 00 00 00 00 48 89 94 24 90 00 00 00 48 8d 15  .....H..$....H..
+	0x0180 00 00 00 00 48 89 94 24 98 00 00 00 48 8b 44 24  ....H..$....H.D$
+	0x0190 18 48 03 44 24 20 e8 00 00 00 00 48 89 44 24 50  .H.D$ .....H.D$P
+	0x01a0 48 8b 7c 24 58 84 07 48 8d 15 00 00 00 00 48 89  H.|$X..H......H.
+	0x01b0 57 10 48 8d 57 18 83 3d 00 00 00 00 00 74 03 90  W.H.W..=.....t..
+	0x01c0 eb 06 48 89 47 18 eb 0a 48 89 d7 e8 00 00 00 00  ..H.G...H.......
+	0x01d0 eb 00 48 8b 44 24 58 84 00 eb 00 48 89 44 24 78  ..H.D$X....H.D$x
+	0x01e0 48 c7 84 24 80 00 00 00 02 00 00 00 48 c7 84 24  H..$........H..$
+	0x01f0 88 00 00 00 02 00 00 00 bb 02 00 00 00 48 89 d9  .............H..
+	0x0200 e8 00 00 00 00 48 8b ac 24 e0 00 00 00 48 81 c4  .....H..$....H..
+	0x0210 e8 00 00 00 c3 e8 00 00 00 00 e9 e1 fd ff ff     ...............
 	rel 3+0 t=23 type:string+0
-	rel 3+0 t=23 type:int+0
 	rel 3+0 t=23 type:int+0
 	rel 3+0 t=23 type:int+0
 	rel 3+0 t=23 type:string+0
 	rel 3+0 t=23 type:int+0
-	rel 119+4 t=14 type:string+0
-	rel 134+4 t=14 main..stmp_0+0
-	rel 152+4 t=7 runtime.convT64+0
-	rel 171+4 t=14 type:int+0
-	rel 185+4 t=14 runtime.writeBarrier+-1
-	rel 206+4 t=7 runtime.gcWriteBarrier+0
-	rel 218+4 t=7 runtime.convT64+0
-	rel 237+4 t=14 type:int+0
-	rel 251+4 t=14 runtime.writeBarrier+-1
-	rel 270+4 t=7 runtime.gcWriteBarrier+0
-	rel 282+4 t=7 runtime.convT64+0
-	rel 301+4 t=14 type:int+0
-	rel 315+4 t=14 runtime.writeBarrier+-1
-	rel 334+4 t=7 runtime.gcWriteBarrier+0
-	rel 385+4 t=7 fmt.Println+0
-	rel 390+4 t=7 main.f1+0
-	rel 435+4 t=14 type:string+0
-	rel 450+4 t=14 main..stmp_1+0
-	rel 468+4 t=7 runtime.convT64+0
-	rel 487+4 t=14 type:int+0
-	rel 501+4 t=14 runtime.writeBarrier+-1
-	rel 520+4 t=7 runtime.gcWriteBarrier+0
-	rel 577+4 t=7 fmt.Println+0
-	rel 598+4 t=7 runtime.morestack_noctxt+0
+	rel 101+4 t=14 type:string+0
+	rel 116+4 t=14 main..stmp_0+0
+	rel 134+4 t=7 runtime.convT64+0
+	rel 153+4 t=14 type:int+0
+	rel 167+4 t=14 runtime.writeBarrier+-1
+	rel 186+4 t=7 runtime.gcWriteBarrier+0
+	rel 200+4 t=7 runtime.convT64+0
+	rel 219+4 t=14 type:int+0
+	rel 233+4 t=14 runtime.writeBarrier+-1
+	rel 257+4 t=7 runtime.gcWriteBarrier+0
+	rel 304+4 t=7 fmt.Println+0
+	rel 324+4 t=7 main.f1+0
+	rel 369+4 t=14 type:string+0
+	rel 384+4 t=14 main..stmp_1+0
+	rel 407+4 t=7 runtime.convT64+0
+	rel 426+4 t=14 type:int+0
+	rel 440+4 t=14 runtime.writeBarrier+-1
+	rel 460+4 t=7 runtime.gcWriteBarrier+0
+	rel 513+4 t=7 fmt.Println+0
+	rel 534+4 t=7 runtime.morestack_noctxt+0
 main.f1 STEXT size=248 args=0x0 locals=0x80 funcid=0x0 align=0x0
 	0x0000 00000 (/workspaces/target/target.go:16)	TEXT	main.f1(SB), ABIInternal, $128-0
 	0x0000 00000 (/workspaces/target/target.go:16)	CMPQ	SP, 16(R14)
@@ -390,8 +365,8 @@ type:.eq.[2]interface {} STEXT dupok size=229 args=0x10 locals=0x50 funcid=0x0 a
 	0x00e0 e9 1b ff ff ff                                   .....
 	rel 143+4 t=7 runtime.efaceeq+0
 	rel 210+4 t=7 runtime.morestack_noctxt+0
-type:.eq.[4]interface {} STEXT dupok size=229 args=0x10 locals=0x50 funcid=0x0 align=0x0
-	0x0000 00000 (<autogenerated>:1)	TEXT	type:.eq.[4]interface {}(SB), DUPOK|ABIInternal, $80-16
+type:.eq.[3]interface {} STEXT dupok size=229 args=0x10 locals=0x50 funcid=0x0 align=0x0
+	0x0000 00000 (<autogenerated>:1)	TEXT	type:.eq.[3]interface {}(SB), DUPOK|ABIInternal, $80-16
 	0x0000 00000 (<autogenerated>:1)	CMPQ	SP, 16(R14)
 	0x0004 00004 (<autogenerated>:1)	PCDATA	$0, $-2
 	0x0004 00004 (<autogenerated>:1)	JLS	199
@@ -401,13 +376,13 @@ type:.eq.[4]interface {} STEXT dupok size=229 args=0x10 locals=0x50 funcid=0x0 a
 	0x0013 00019 (<autogenerated>:1)	LEAQ	72(SP), BP
 	0x0018 00024 (<autogenerated>:1)	FUNCDATA	$0, gclocals·TjPuuCwdlCpTaRQGRKTrYw==(SB)
 	0x0018 00024 (<autogenerated>:1)	FUNCDATA	$1, gclocals·EXTrhv4b3ahawRWAszmcVw==(SB)
-	0x0018 00024 (<autogenerated>:1)	FUNCDATA	$5, type:.eq.[4]interface {}.arginfo1(SB)
+	0x0018 00024 (<autogenerated>:1)	FUNCDATA	$5, type:.eq.[3]interface {}.arginfo1(SB)
 	0x0018 00024 (<autogenerated>:1)	MOVQ	AX, main.p+88(SP)
 	0x001d 00029 (<autogenerated>:1)	MOVQ	BX, main.q+96(SP)
 	0x0022 00034 (<autogenerated>:1)	MOVB	$0, main.r+31(SP)
 	0x0027 00039 (<autogenerated>:1)	MOVQ	$0, main..autotmp_3+32(SP)
 	0x0030 00048 (<autogenerated>:1)	JMP	50
-	0x0032 00050 (<autogenerated>:1)	CMPQ	main..autotmp_3+32(SP), $4
+	0x0032 00050 (<autogenerated>:1)	CMPQ	main..autotmp_3+32(SP), $3
 	0x0038 00056 (<autogenerated>:1)	JLT	60
 	0x003a 00058 (<autogenerated>:1)	JMP	177
 	0x003c 00060 (<autogenerated>:1)	MOVQ	main..autotmp_3+32(SP), DX
@@ -463,7 +438,7 @@ type:.eq.[4]interface {} STEXT dupok size=229 args=0x10 locals=0x50 funcid=0x0 a
 	0x0000 49 3b 66 10 0f 86 bd 00 00 00 48 83 ec 50 48 89  I;f.......H..PH.
 	0x0010 6c 24 48 48 8d 6c 24 48 48 89 44 24 58 48 89 5c  l$HH.l$HH.D$XH.\
 	0x0020 24 60 c6 44 24 1f 00 48 c7 44 24 20 00 00 00 00  $`.D$..H.D$ ....
-	0x0030 eb 00 48 83 7c 24 20 04 7c 02 eb 75 48 8b 54 24  ..H.|$ .|..uH.T$
+	0x0030 eb 00 48 83 7c 24 20 03 7c 02 eb 75 48 8b 54 24  ..H.|$ .|..uH.T$
 	0x0040 20 48 c1 e2 04 48 03 54 24 60 48 8b 32 48 8b 52   H...H.T$`H.2H.R
 	0x0050 08 48 89 74 24 38 48 89 54 24 40 48 8b 54 24 20  .H.t$8H.T$@H.T$ 
 	0x0060 48 c1 e2 04 48 03 54 24 58 48 8b 02 48 8b 5a 08  H...H.T$XH..H.Z.
@@ -487,16 +462,16 @@ main..inittask SNOPTRDATA size=32
 	rel 24+8 t=1 fmt..inittask+0
 go:string."hello world " SRODATA dupok size=12
 	0x0000 68 65 6c 6c 6f 20 77 6f 72 6c 64 20              hello world 
-go:string."sum " SRODATA dupok size=4
-	0x0000 73 75 6d 20                                      sum 
+go:string."sum+c " SRODATA dupok size=6
+	0x0000 73 75 6d 2b 63 20                                sum+c 
 go:string."i+j" SRODATA dupok size=3
 	0x0000 69 2b 6a                                         i+j
 main..stmp_0 SRODATA static size=16
 	0x0000 00 00 00 00 00 00 00 00 0c 00 00 00 00 00 00 00  ................
 	rel 0+8 t=1 go:string."hello world "+0
 main..stmp_1 SRODATA static size=16
-	0x0000 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00  ................
-	rel 0+8 t=1 go:string."sum "+0
+	0x0000 00 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00  ................
+	rel 0+8 t=1 go:string."sum+c "+0
 main..stmp_2 SRODATA static size=16
 	0x0000 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00  ................
 	rel 0+8 t=1 go:string."i+j"+0
@@ -534,48 +509,48 @@ type:*[2]interface {} SRODATA dupok size=56
 	rel 32+8 t=1 runtime.gcbits.0100000000000000+0
 	rel 40+4 t=5 type:.namedata.*[2]interface {}-+0
 	rel 48+8 t=1 type:[2]interface {}+0
-type:.eqfunc.[4]interface {} SRODATA dupok size=8
+type:.eqfunc.[3]interface {} SRODATA dupok size=8
 	0x0000 00 00 00 00 00 00 00 00                          ........
-	rel 0+8 t=1 type:.eq.[4]interface {}+0
-runtime.gcbits.aa00000000000000 SRODATA dupok size=8
-	0x0000 aa 00 00 00 00 00 00 00                          ........
-type:.namedata.*[4]interface {}- SRODATA dupok size=18
-	0x0000 00 10 2a 5b 34 5d 69 6e 74 65 72 66 61 63 65 20  ..*[4]interface 
+	rel 0+8 t=1 type:.eq.[3]interface {}+0
+runtime.gcbits.2a00000000000000 SRODATA dupok size=8
+	0x0000 2a 00 00 00 00 00 00 00                          *.......
+type:.namedata.*[3]interface {}- SRODATA dupok size=18
+	0x0000 00 10 2a 5b 33 5d 69 6e 74 65 72 66 61 63 65 20  ..*[3]interface 
 	0x0010 7b 7d                                            {}
-type:[4]interface {} SRODATA dupok size=72
-	0x0000 40 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  @.......@.......
-	0x0010 82 ff fd 65 02 08 08 11 00 00 00 00 00 00 00 00  ...e............
+type:[3]interface {} SRODATA dupok size=72
+	0x0000 30 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00  0.......0.......
+	0x0010 83 2e 45 51 02 08 08 11 00 00 00 00 00 00 00 00  ..EQ............
 	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
 	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-	0x0040 04 00 00 00 00 00 00 00                          ........
-	rel 24+8 t=1 type:.eqfunc.[4]interface {}+0
-	rel 32+8 t=1 runtime.gcbits.aa00000000000000+0
-	rel 40+4 t=5 type:.namedata.*[4]interface {}-+0
-	rel 44+4 t=-32763 type:*[4]interface {}+0
+	0x0040 03 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 type:.eqfunc.[3]interface {}+0
+	rel 32+8 t=1 runtime.gcbits.2a00000000000000+0
+	rel 40+4 t=5 type:.namedata.*[3]interface {}-+0
+	rel 44+4 t=-32763 type:*[3]interface {}+0
 	rel 48+8 t=1 type:interface {}+0
 	rel 56+8 t=1 type:[]interface {}+0
-type:*[4]interface {} SRODATA dupok size=56
+type:*[3]interface {} SRODATA dupok size=56
 	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
-	0x0010 38 15 0c d3 08 08 08 36 00 00 00 00 00 00 00 00  8......6........
+	0x0010 7f 88 4d c8 08 08 08 36 00 00 00 00 00 00 00 00  ..M....6........
 	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
 	0x0030 00 00 00 00 00 00 00 00                          ........
 	rel 24+8 t=1 runtime.memequal64·f+0
 	rel 32+8 t=1 runtime.gcbits.0100000000000000+0
-	rel 40+4 t=5 type:.namedata.*[4]interface {}-+0
-	rel 48+8 t=1 type:[4]interface {}+0
+	rel 40+4 t=5 type:.namedata.*[3]interface {}-+0
+	rel 48+8 t=1 type:[3]interface {}+0
 type:.importpath.fmt. SRODATA dupok size=5
 	0x0000 00 03 66 6d 74                                   ..fmt
 gclocals·ykHN0vawYuq1dUW4zEe2gA== SRODATA dupok size=8
 	0x0000 03 00 00 00 00 00 00 00                          ........
-gclocals·jfJUoH/pww2vUtnyhOalDA== SRODATA dupok size=17
-	0x0000 03 00 00 00 18 00 00 00 00 00 00 04 00 00 10 00  ................
+gclocals·hl8hlxyyFD33Z4qAKqAg3w== SRODATA dupok size=17
+	0x0000 03 00 00 00 15 00 00 00 00 00 00 04 00 00 10 00  ................
 	0x0010 00                                               .
 main.main.stkobj SRODATA static size=40
-	0x0000 02 00 00 00 00 00 00 00 a0 ff ff ff 20 00 00 00  ............ ...
-	0x0010 20 00 00 00 00 00 00 00 c0 ff ff ff 40 00 00 00   ...........@...
-	0x0020 40 00 00 00 00 00 00 00                          @.......
+	0x0000 02 00 00 00 00 00 00 00 b0 ff ff ff 20 00 00 00  ............ ...
+	0x0010 20 00 00 00 00 00 00 00 d0 ff ff ff 30 00 00 00   ...........0...
+	0x0020 30 00 00 00 00 00 00 00                          0.......
 	rel 20+4 t=5 runtime.gcbits.0a00000000000000+0
-	rel 36+4 t=5 runtime.gcbits.aa00000000000000+0
+	rel 36+4 t=5 runtime.gcbits.2a00000000000000+0
 gclocals·J5F+7Qw7O7ve2QcWC7DpeQ== SRODATA dupok size=8
 	0x0000 02 00 00 00 00 00 00 00                          ........
 gclocals·rHHWhnQ4OcNEMygZHCbw/Q== SRODATA dupok size=12
@@ -590,5 +565,5 @@ gclocals·EXTrhv4b3ahawRWAszmcVw== SRODATA dupok size=10
 	0x0000 02 00 00 00 04 00 00 00 00 00                    ..........
 type:.eq.[2]interface {}.arginfo1 SRODATA static dupok size=3
 	0x0000 08 08 ff                                         ...
-type:.eq.[4]interface {}.arginfo1 SRODATA static dupok size=3
+type:.eq.[3]interface {}.arginfo1 SRODATA static dupok size=3
 	0x0000 08 08 ff                                         ...

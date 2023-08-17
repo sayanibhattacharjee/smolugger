@@ -7,10 +7,10 @@ import (
 func main() {
 	a := 10
 	b := 20
-	c := a + b + 50
-	fmt.Println("hello world ", a, b, c)
+	fmt.Println("hello world ", a, b)
+	c := a + b
 	sum := f1()
-	fmt.Println("sum ", sum)
+	fmt.Println("sum+c ", sum+c)
 }
 
 func f1() int {

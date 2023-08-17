@@ -87,25 +87,27 @@ func main() {
 			pc := prog.GetPC()
 			log.Println("Before step in line: ", table.PCToLine(pc))
 			prog.Step()
+			pc = prog.GetPC()
 			log.Println("After step in line: ", table.PCToLine(pc))
 		case constants.StepInstruction:
 			pc := prog.GetPC()
 			log.Println("Before step instruction line: ", table.PCToLine(pc))
 			prog.Step()
+			pc = prog.GetPC()
 			log.Println("After step instruction line: ", table.PCToLine(pc))
 		case constants.StepOut:
 			regs := prog.GetRegisters()
 			prog.PrintRegs(regs)
-			returnAddr := ReadMem(prog.PeekAt(regs.Rbp - 8))
-			log.Println("Setting breakpoint at: ", HEX(returnAddr))
+			returnAddr := ReadMem(prog.PeekAt(regs.Rbp + 8))
+			// log.Println("Setting breakpoint at: ", HEX(returnAddr))
 			prog.InsertBreakpoint(returnAddr)
 
 			// this is where actually stepping out happens
 			prog.Continue()
 			pc = prog.GetPC()
-			log.Println("[Step out 2] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			log.Println("[Step out 2] step over successful, hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
 			prog.RemoveBreakpoint(returnAddr)
-			prog.Continue()
+			// prog.Continue()
 		case constants.StepOver:
 			// implemented by putting a breakpoint in every line of the current source code
 			// stepoverBreakPoint := 8
