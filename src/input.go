@@ -20,8 +20,6 @@ func scanInput() string {
 				fmt.Println("returning err for ReadString EOF")
 
 			}
-			fmt.Println("returning err for ReadString")
-
 		}
 		switch strings.ToUpper(strings.TrimSpace(input)) {
 		case "A":

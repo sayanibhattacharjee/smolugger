@@ -47,7 +47,7 @@ func (p *Program) StartTracing() {
 	// lo.Must0(sys.PtraceSetOptions(p.Cmd.Process.Pid, sys.PTRACE_O_TRACECLONE))
 }
 
-func (p *Program) Continue() {
+func (p *Program) Continue() bool {
 	pid := p.Cmd.Process.Pid
 	sys.PtraceCont(pid, 0)
 	var ws sys.WaitStatus
@@ -55,8 +55,9 @@ func (p *Program) Continue() {
 
 	if ws.Exited() {
 		log.Println("==== Process exited=====")
-		return
+		return false
 	}
+	return true
 
 }
 
@@ -72,7 +73,7 @@ func (p *Program) Step() {
 
 func (p *Program) InsertBreakpoint(addr uint64) {
 	pid := p.Cmd.Process.Pid
-	data := make([]byte, 1)
+	data := make([]byte, 8)
 	_, err := sys.PtracePeekData(pid, uintptr(addr), data)
 	if err != nil {
 		log.Fatal(err)
@@ -95,6 +96,11 @@ func (p *Program) RemoveBreakpoint(addr uint64) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	// delete(p.breakPointMap, addr)
+	// for k := range p.breakPointMap {
+	// 	fmt.Println("cur map === ", HEX(k))
+	// }
+
 }
 
 // GetPC returns rip

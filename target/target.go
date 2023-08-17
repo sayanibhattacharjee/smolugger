@@ -2,20 +2,20 @@ package main
 
 import (
 	"fmt"
-	l "log"
-	"os"
 )
-
-var log = l.New(os.Stdout, "[TARGET] ", l.Lshortfile)
 
 func main() {
 	a := 10
 	b := 20
-	sum := add(a, b)
-	fmt.Println("hello world ", sum)
+	c := a + b + 50
+	fmt.Println("hello world ", a, b, c)
+	sum := f1()
+	fmt.Println("sum ", sum)
 }
 
-func add(a, b int) int {
-	c := a + b
-	return c
+func f1() int {
+	i := 2
+	j := 3
+	fmt.Println("i+j", i+j)
+	return i + j
 }

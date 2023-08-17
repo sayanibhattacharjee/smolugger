@@ -46,10 +46,10 @@ func main() {
 	}
 
 	for _, breakpoint := range breakPoints {
-		log.Println("Breakpoint: line :", breakpoint, " pc: ", HEX(table.LineToPc(breakpoint)))
 		log.Println("Data : ", prog.PeekAt(table.LineToPc(breakpoint)))
 		prog.InsertBreakpoint(table.LineToPc(breakpoint))
-		log.Println("Data : ", prog.PeekAt(table.LineToPc(breakpoint)))
+		peekedData := prog.PeekAt(table.LineToPc(breakpoint))
+		log.Println("Data : ", peekedData)
 	}
 
 	log.Println("PC: main.main = ", HEX(table.FuncToPc("main.main")))
@@ -65,13 +65,21 @@ func main() {
 		input := scanInput()
 		switch input {
 		case constants.Continue:
-			fmt.Println("continuing")
-			prog.Continue()
+			fmt.Println("continuing, breakpoint store === ", prog.breakPointMap)
+
 			pc = prog.GetPC()
-			log.Println("[Continue] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
 			log.Println("Data : ", prog.PeekAt(pc))
+
 			prog.RemoveBreakpoint(pc)
 			log.Println("Data : ", prog.PeekAt(pc))
+
+			progStatus := prog.Continue()
+			pc = prog.GetPC()
+			if progStatus {
+				log.Println("[Continue] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			} else {
+				return
+			}
 		case constants.Step:
 			// Actual step-in is implemented by putting a breakpoint in every line of the source code
 			// Current implementation is the same as StepInstruction
@@ -86,22 +94,9 @@ func main() {
 			prog.Step()
 			log.Println("After step instruction line: ", table.PCToLine(pc))
 		case constants.StepOut:
-			fmt.Println("stepping out")
-			log.Println("Return PC :", HEX(table.LineToPc(27)))
-			prog.InsertBreakpoint(table.LineToPc(27))
-			log.Println("PC : ", HEX(prog.GetPC()))
-			log.Println("Data : ", prog.PeekAt(table.LineToPc(27)))
-
-			// we are at beginning of program now. let us continue
-
-			prog.Continue()
-			pc := prog.GetPC()
-			log.Println("[Step out 1] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
-			prog.RemoveBreakpoint(table.LineToPc(33))
-
 			regs := prog.GetRegisters()
 			prog.PrintRegs(regs)
-			returnAddr := ReadMem(prog.PeekAt(regs.Rbp + 8))
+			returnAddr := ReadMem(prog.PeekAt(regs.Rbp - 8))
 			log.Println("Setting breakpoint at: ", HEX(returnAddr))
 			prog.InsertBreakpoint(returnAddr)
 
@@ -113,7 +108,40 @@ func main() {
 			prog.Continue()
 		case constants.StepOver:
 			// implemented by putting a breakpoint in every line of the current source code
-			return
+			// stepoverBreakPoint := 8
+			prog.Continue()
+			pc = prog.GetPC()
+			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			prog.RemoveBreakpoint(table.LineToPc(8))
+			prog.InsertBreakpoint(table.LineToPc(9))
+			prog.Continue()
+			pc = prog.GetPC()
+			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			prog.RemoveBreakpoint(table.LineToPc(9))
+			prog.InsertBreakpoint(table.LineToPc(10))
+			prog.Continue()
+			pc = prog.GetPC()
+			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			prog.RemoveBreakpoint(table.LineToPc(10))
+			prog.InsertBreakpoint(table.LineToPc(11))
+			prog.Continue()
+			pc = prog.GetPC()
+			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			prog.RemoveBreakpoint(table.LineToPc(11))
+
+			pc = prog.GetPC()
+			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			prog.Continue()
+
+			pc = prog.GetPC()
+			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+
+			// prog.InsertBreakpoint(table.LineToPc(12))
+
+			// prog.RemoveBreakpoint(table.LineToPc(12))
+			// prog.Continue()
+			// pc = prog.GetPC()
+			// log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
 		}
 	}
 }
