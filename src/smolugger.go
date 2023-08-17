@@ -61,6 +61,7 @@ func main() {
 	prog.Continue()
 	log.Println("Initial continue till ", table.PCToLine(pc))
 
+	stepOverLine := 10
 	for {
 		input := scanInput()
 		switch input {
@@ -110,40 +111,23 @@ func main() {
 			// prog.Continue()
 		case constants.StepOver:
 			// implemented by putting a breakpoint in every line of the current source code
-			// stepoverBreakPoint := 8
-			prog.Continue()
-			pc = prog.GetPC()
-			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
-			prog.RemoveBreakpoint(table.LineToPc(8))
-			prog.InsertBreakpoint(table.LineToPc(9))
-			prog.Continue()
-			pc = prog.GetPC()
-			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
-			prog.RemoveBreakpoint(table.LineToPc(9))
-			prog.InsertBreakpoint(table.LineToPc(10))
-			prog.Continue()
-			pc = prog.GetPC()
-			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
-			prog.RemoveBreakpoint(table.LineToPc(10))
-			prog.InsertBreakpoint(table.LineToPc(11))
-			prog.Continue()
-			pc = prog.GetPC()
-			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
-			prog.RemoveBreakpoint(table.LineToPc(11))
-
-			pc = prog.GetPC()
-			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
-			prog.Continue()
-
-			pc = prog.GetPC()
-			log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
-
-			// prog.InsertBreakpoint(table.LineToPc(12))
-
-			// prog.RemoveBreakpoint(table.LineToPc(12))
-			// prog.Continue()
-			// pc = prog.GetPC()
-			// log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			fmt.Println("Stepping over")
+			fmt.Println("cur line is ======= ", stepOverLine)
+			if stepOverLine == 12 {
+				stepOverLine++
+				fmt.Println("inserting bp at line: ", stepOverLine)
+				prog.InsertBreakpoint(table.LineToPc(stepOverLine))
+				prog.Continue()
+				pc = prog.GetPC()
+				log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+			} else {
+				prog.InsertBreakpoint(table.LineToPc(stepOverLine))
+				prog.Continue()
+				pc = prog.GetPC()
+				log.Println("[Step over] breakpoint hit pc: ", HEX(pc), "line: ", table.PCToLine(pc))
+				stepOverLine++
+			}
+			// prog.RemoveBreakpoint(table.LineToPc(9))
 		}
 	}
 }

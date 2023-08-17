@@ -7,7 +7,7 @@ import (
 func main() {
 	a := 10
 	b := 20
-	fmt.Println("hello world ", a, b)
+	fmt.Println("hello world ", a)
 	c := a + b
 	sum := f1()
 	fmt.Println("sum+c ", sum+c)
