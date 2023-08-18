@@ -17,7 +17,7 @@ func main() {
 	cmd.Args = []string{input}
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	// enables tracking and process will stop and send SIGSTOP signal to its parent before start
+	// enables tracking, process will stop and send SIGSTOP signal to its parent before start
 	cmd.SysProcAttr = &syscall.SysProcAttr{Ptrace: true}
 	err := cmd.Start()
 	if err != nil {
@@ -29,7 +29,6 @@ func main() {
 		fmt.Printf("Wait returned: %v\n\n", err)
 	}
 	log.Printf("State: %v\n", err)
-	log.Println("Restarting...")
 	// restarts the traced process
 	err = syscall.PtraceCont(cmd.Process.Pid, 0)
 	if err != nil {
